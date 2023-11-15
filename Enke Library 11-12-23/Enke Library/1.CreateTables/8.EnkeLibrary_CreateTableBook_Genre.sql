@@ -1,0 +1,11 @@
+use enkelibrary;
+CREATE TABLE Book_Genre(
+BookGenreID int NOT NULL AUTO_INCREMENT,
+BookID int NOT NULL,
+GenreID int NOT NULL,
+
+CONSTRAINT Book_Genre_PK PRIMARY KEY (BookGenreID),
+CONSTRAINT BookGenre_FK FOREIGN KEY (BookID) REFERENCES Book(BookID),
+CONSTRAINT GenreID_FK FOREIGN KEY (GenreID) REFERENCES Genre(GenreID)
+)
+;
