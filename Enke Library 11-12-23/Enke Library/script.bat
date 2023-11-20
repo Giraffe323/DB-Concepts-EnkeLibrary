@@ -1,18 +1,27 @@
-@ECHO off
-Rem First, run the sql file that creates the database
-"C:\Program Files\MySQL\MySQL Server 8.1\bin\mysql.exe" --user=root < 0.EnkeLibrary_CreateEnkeLibrary.sql
+@ECHO OFF
+for /D %%a in ("C:\Program Files\MySQL\MySQL Server 8.*") do set "mySQLVerNum=%%a"
 
-Rem For each folder/directory......
+echo Enter MySQL Password or leave blank if no password:
+set /p "pass=>"
+
+::First, run the sql file that creates the database
+ "%mySQLVerNum%\bin\mysql.exe" --user=root --password=%/p% < 0.EnkeLibrary_CreateEnkeLibrary.sql
+
+
+
+::For each folder/directory......
 FOR /D %%D IN (*) DO (
-    Rem Change directory to the param %D
+    ::Change directory to the param %D
     CD "./%%D"
-    Rem For each sql file........
+    ::For each sql file........
     FOR %%A IN ("*.sql") DO (
-    Rem Run the sql file in enkelibrary DB
-        "C:\Program Files\MySQL\MySQL Server 8.1\bin\mysql.exe" --user=root enkelibrary < %%A
+    ::Run the sql file in enkelibrary DB
+        echo Running file: %%A
+        "%mySQLVerNum%\bin\mysql.exe" --user=root --password=%/p% enkelibrary < %%A > nul
     )
-    Rem Go up one directory after we finish with this directory
+    ::Go up one directory after we finish with this directory
     CD "../"
 )
-rem Keep the window open to read output if necessary
+:: Keep the window open to read output if necessary
+
 pause
