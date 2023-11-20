@@ -1,3 +1,4 @@
+use enkelibrary;
 insert into CheckInOut_Detail (inventoryID, CheckInOut_HeaderID, checkInDate, checkOutDate, dueDate) values (1009, 1132, '2023-06-28', '2023-11-15', '2022-12-31');
 insert into CheckInOut_Detail (inventoryID, CheckInOut_HeaderID, checkInDate, checkOutDate, dueDate) values (1035, 1118, '2023-03-05', '2023-03-30', '2023-06-21');
 insert into CheckInOut_Detail (inventoryID, CheckInOut_HeaderID, checkInDate, checkOutDate, dueDate) values (1005, 1125, '2023-06-03', '2023-01-13', '2023-08-03');
