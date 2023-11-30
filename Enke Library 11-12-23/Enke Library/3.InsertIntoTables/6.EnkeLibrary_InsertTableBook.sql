@@ -23,7 +23,7 @@ INSERT INTO book (bookTitle, bookISBN, bookPublishDate, bookPublisherID) VALUES
 ('The Metamorphosis', '9780141036133', '1915-10-15', 338),
 ('The Picture of Dorian Gray', '9780141439570', '1890-01-01', 304),
 ('The Count of Monte Cristo', '9780140449266', '1844-01-28', 334),
-('Crime and Punishment', '9780143058141', '1866-01-28', 350),
+('Crime and Punishment', '9780143058141', '1866-01-28', 342),
 ('The Bell Jar', '9780571081783', '1963-01-14', 331),
 ('The Color Purple', '9780156031820', '1982-01-01', 342),
 ('The Fault in Our Stars', '9780525478812', '2012-01-10', 318),
