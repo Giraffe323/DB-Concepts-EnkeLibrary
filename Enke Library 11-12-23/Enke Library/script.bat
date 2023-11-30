@@ -2,10 +2,10 @@
 for /D %%a in ("C:\Program Files\MySQL\MySQL Server 8.*") do set "mySQLVerNum=%%a"
 
 echo Enter MySQL Password or leave blank if no password:
-set /p "pass=>"
+set /p pass=
 
 ::First, run the sql file that creates the database
- "%mySQLVerNum%\bin\mysql.exe" --user=root --password=%/p% < 0.EnkeLibrary_CreateEnkeLibrary.sql
+ "%mySQLVerNum%\bin\mysql.exe" --user=root --password=%pass% < 0.EnkeLibrary_CreateEnkeLibrary.sql
 
 
 
