@@ -1,0 +1,7 @@
+ALTER TABLE inventory
+DROP FOREIGN KEY bookBranch_FK;
+
+ALTER TABLE inventory
+ ADD CONSTRAINT bookBranch_FK
+FOREIGN KEY (BranchID) REFERENCES branch (BranchID)
+ON DELETE CASCADE;

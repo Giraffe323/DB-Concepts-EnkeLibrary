@@ -1,0 +1,2 @@
+use enkelibrary;
+drop trigger trg_low_inventory_warning
